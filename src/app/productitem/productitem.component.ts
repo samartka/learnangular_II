@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter,Output } from '@angular/core';
 import { Product } from '../models/product';
 
 
@@ -11,10 +11,16 @@ import { Product } from '../models/product';
 export class ProductitemComponent implements OnInit {
   @Input()
   Product:Product;
-  
+
+  @Output()
+  onSelected : EventEmitter<Product> = new EventEmitter();
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  select() {
+    this.onSelected.emit(this.Product);
+  }
 }
