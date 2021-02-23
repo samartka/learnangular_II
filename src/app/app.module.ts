@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductitemComponent } from './productitem/productitem.component';
 import { PanelComponent } from './panel/panel.component';
+import { BackendService } from "./backend.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { PanelComponent } from './panel/panel.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [BackendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
