@@ -1,6 +1,10 @@
 import { Component,OnInit,ViewChild } from '@angular/core';
-import { ProductlistComponent } from './productlist/productlist.component';
+// import { CatalogModule } from '../app/catalog/catalog.module';
+import { ProductlistComponent } from '../app/catalog/productlist/productlist.component';
 import { BackendService } from "./backend.service";
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

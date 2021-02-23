@@ -1,0 +1,13 @@
+<app-panel>
+    <div class="box" [class.selected]="isSelected">
+
+        <h3>{{ Product.name }}</h3>
+        <p> 
+            <span> ราคา : {{Product.price}} บาท</span>
+        </p>
+        <p>
+            <button class="btn btn-primary" (click)="select()"> เลือก</button>
+        </p>
+        
+    </div>
+</app-panel>
