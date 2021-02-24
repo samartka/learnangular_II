@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { BackendService } from "./backend.service";
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+import { MatButtonModule } from "@angular/material/button";
 //import { ProductlistComponent } from "./catalog/productlist/productlist.component";
 //import { ProductDetailComponent } from "./catalog/product-detail/product-detail.component";
 
@@ -28,7 +30,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PageNotFoundComponent
   ],
   imports: [
-    BrowserModule,FormsModule,CatalogModule,HomeModule,AppRouteModule,BrowserAnimationsModule],
+    BrowserModule,FormsModule,CatalogModule,HomeModule,AppRouteModule,BrowserAnimationsModule,MatButtonModule],
   providers: [BackendService],
   bootstrap: [AppComponent]
 })
