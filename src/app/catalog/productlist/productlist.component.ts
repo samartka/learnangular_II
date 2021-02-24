@@ -1,6 +1,7 @@
 import { Component, OnInit ,ViewChildren,QueryList} from '@angular/core';
 import { Product } from '../../models/product';
 import {ProductitemComponent} from '../productitem/productitem.component'
+import { BackendService } from "../../backend.service";
 
 @Component({
   selector: 'app-productlist',
@@ -13,17 +14,15 @@ export class ProductlistComponent implements OnInit {
 
   products:Product[];
 
-  constructor() {
+  constructor(private backendService: BackendService) {
     this.products = [];
     
-    // this.products.push({name:'ข้าวเหนียว',price:200});
-    // this.products.push({name:'ข้าวญี่ปุ่น',price:300});
-    // this.products.push({name:'ข้าวหัก',price:100});
-    // this.products.push({name:'หมูสามชั้น',price:145});
-    // this.products.push({name:'IPAD',price:15000});
+
    }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.products = this.backendService.getProducts();
+  }
 
   selectedProduct(productComponent:ProductitemComponent){
     alert(`Product ${productComponent.Product.name} is selected`);

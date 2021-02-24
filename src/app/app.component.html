@@ -1,12 +1,40 @@
-<div>
+<!-- <div> -->
   <!-- <app-home [title]="'home component 1'"></app-home>
   <app-productlist></app-productlist> -->
 
-  <h2>Product List</h2>
-  <app-productlist #productlist></app-productlist>
+  <!-- <h2>Product List</h2>
+
+  
 
 
   <app-navbar></app-navbar>
-  <app-main-content></app-main-content>
+  <app-main-content></app-main-content> -->
+  <!-- <router-outlet></router-outlet> -->
+<!-- </div> -->
 
+<!-- <app-productlist #productlist></app-productlist> -->
+
+<div>
+  <ul>
+    <li>
+      <a [routerLink]="['/']">Home</a>
+    </li>
+    <li>
+      <a [routerLink]="['/login']">Login</a>
+    </li>
+    <li>
+      <a [routerLink]="['/products']" #productlist>Products</a>
+    </li>
+    <li>
+      <a [routerLink]="['/products/222']">Products Id 222</a>
+    </li>
+  </ul>
+</div>
+  
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<div>
+  .. footer ..
 </div>
